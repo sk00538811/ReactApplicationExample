@@ -3,7 +3,7 @@ var listItems = React.createClass({
     getItems: function () {
         var items = [];
         for (var i = 0; i < numbers.length; i++) {
-            items.push(this.renderItem(numbers[i]));
+            items.push(this.getItem(numbers[i]));
         }
         return items;
     },

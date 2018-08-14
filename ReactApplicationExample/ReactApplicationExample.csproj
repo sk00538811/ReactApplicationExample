@@ -204,6 +204,7 @@
     <Content Include="Scripts\example\component-prop.js" />
     <Content Include="Scripts\example\component-state.js" />
     <Content Include="Scripts\example\data-to-create-component.js" />
+    <Content Include="Scripts\example\dropdown-with-react.js" />
     <Content Include="Scripts\example\nested-Component.js" />
     <Content Include="Scripts\example\passing-data-between-classes-components.js" />
     <Content Include="Scripts\jquery-1.10.2.js" />
@@ -250,6 +251,7 @@
     <Content Include="Scripts\jquery-1.10.2.min.map" />
     <Content Include="Site.Mobile.Master" />
     <Content Include="Views\web.config" />
+    <Content Include="Scripts\JSONData\DowpdownData.json" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
