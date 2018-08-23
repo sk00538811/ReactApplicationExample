@@ -7,7 +7,7 @@
         }, "Input Component",
             React.DOM.br(),
             React.DOM.label({
-                for: 'txtName'
+                htmlFor : 'txtName'
             }, 'Enter Name'),
             React.DOM.input({
                 id: 'txtName', className: 'form-control',

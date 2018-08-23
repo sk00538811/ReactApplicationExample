@@ -49,7 +49,7 @@ var rootElement = React.createClass({
             React.DOM.div({
                 className: 'form-group'
             }, React.DOM.label({
-                for: 'txtName'
+                    htmlFor : 'txtName'
             }, 'Enter Name'),
                 React.DOM.input({ id: 'txtName', className: 'form-control' })),
             React.DOM.br(),

@@ -205,7 +205,9 @@
     <Content Include="Scripts\example\component-state.js" />
     <Content Include="Scripts\example\data-to-create-component.js" />
     <Content Include="Scripts\example\dropdown-with-react.js" />
+    <Content Include="Scripts\example\nested-Component-Pass-val-method.js" />
     <Content Include="Scripts\example\nested-Component.js" />
+    <Content Include="Scripts\example\parent-call-child-method.js" />
     <Content Include="Scripts\example\passing-data-between-classes-components.js" />
     <Content Include="Scripts\jquery-1.10.2.js" />
     <Content Include="Scripts\jquery-1.10.2.min.js" />
