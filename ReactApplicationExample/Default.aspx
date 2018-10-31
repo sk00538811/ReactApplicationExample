@@ -2,7 +2,7 @@
 
 <asp:Content ID="cntHeaderScript" runat="server" ContentPlaceHolderID="cphHeaderScript">
     <script src="Scripts/lib/React/react-with-addons-0.9.0.js"></script> 
-    <script src="Scripts/example/parent-call-child-method.js"></script>
+    <script src="Scripts/example/modal-Component.js"></script>
 </asp:Content>
 <asp:Content ID="BodyContent" ContentPlaceHolderID="MainContent" runat="server">
 
