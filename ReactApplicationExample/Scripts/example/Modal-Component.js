@@ -24,7 +24,7 @@
 
 var Modal = React.createClass({
     render: function () {
-        return React.DOM.div({ className: "modal fade " + this.props.show ? "in" : "out" , tabIndex: "-1", style: { display: this.props.show ? "block" : "none" }  , role: "dialog" }   ,
+        return React.DOM.div({ className: "modal fade " +( this.props.show ? "in" : "out") , tabIndex: "-1", style: { display: this.props.show ? "block" : "none" }  , role: "dialog" }   ,
             React.DOM.div({ className: "modal-dialog", role: "document" },
                 React.DOM.div({ className: "modal-content"},
                     React.DOM.div({ className: "modal-header" },
