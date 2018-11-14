@@ -28,7 +28,7 @@ var Modal = React.createClass({
         return React.DOM.div({
             className: "modal fade " + (this.props.show ? "in" : "out"), tabIndex: "-1",
             style: {  display: (this.props.show ? "block" : "none"), position: 'fixed', zIndex: 1040,  top: 0, bottom: 0, left: 0, right: 0}, role: "dialog" },
-            React.DOM.div({ style: { position: 'fixed', zIndex: 1040, top: 0, bottom: 0, left: 0, right: 0,  backgroundColor: '#000',  opacity: 0.5}} ),
+            React.DOM.div({ style: { position: 'fixed', zIndex: 1040, top: 0, bottom: 0, left: 0, right: 0,  backgroundColor: '#000',  opacity: 0.5}, onClick: this.props.onHide } ),
             React.DOM.div({ className: "modal-dialog", role: "document" },
                 React.DOM.div({ className: "modal-content"},
                     React.DOM.div({ className: "modal-header" },
