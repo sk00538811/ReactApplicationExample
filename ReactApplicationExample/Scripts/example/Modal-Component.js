@@ -1,14 +1,14 @@
 ﻿var rootElement = React.createClass({
     getInitialState() {
         
-        return { showModal: false };
+        return { showModal: false, modalHTMLBody:"<p>One fine body&hellip;</p>" };
     },
-    close() {
+    close:function() {
         this.setState({ showModal: false });
     },
-    open() {
-       
-        this.setState({ showModal: true });
+    open: function() {
+        var tempHTML = "<div>Now model is open <br/><br/><div class='btn btn-primary'>Dummy Button</div></div>";
+        this.setState({ showModal: true, modalHTMLBody:tempHTML });
     },
     render: function () {
         return React.DOM.div({ id: 'dvContainer', className: "container" },
@@ -17,7 +17,7 @@
                 href: "#", role: "button",
                 onClick: this.open
             }, "Show modal"),
-            Modal({ show: this.state.showModal , onHide: this.close })
+            Modal({ show: this.state.showModal , onHide: this.close, bodyHTML:this.state.modalHTMLBody })
         );
     }
 });
@@ -32,8 +32,8 @@ var Modal = React.createClass({
                             React.DOM.span({ "aria-hidden": "true" },"X"  )),
                         React.DOM.h4({ className: "modal-title" },"Modal title")
                     ),
-                    React.DOM.div({  className: "modal-body"  },
-                       React.DOM.p(null,"One fine body&hellip;")
+                    React.DOM.div({ className: "modal-body", dangerouslySetInnerHTML: { __html:this.props.bodyHTML} }
+                       //,React.DOM.p(null,"One fine body&hellip;")
                     ),
                     React.DOM.div({
                         className: "modal-footer"
