@@ -17,14 +17,18 @@
                 href: "#", role: "button",
                 onClick: this.open
             }, "Show modal"),
-            Modal({ show: this.state.showModal , onHide: this.close, bodyHTML:this.state.modalHTMLBody })
+            Modal({ show: this.state.showModal, onHide: this.close, bodyHTML: this.state.modalHTMLBody })
         );
     }
 });
-
+ 
 var Modal = React.createClass({
+
     render: function () {
-        return React.DOM.div({ className: "modal fade " +( this.props.show ? "in" : "out") , tabIndex: "-1", style: { display: this.props.show ? "block" : "none" }  , role: "dialog" }   ,
+        return React.DOM.div({
+            className: "modal fade " + (this.props.show ? "in" : "out"), tabIndex: "-1",
+            style: {  display: (this.props.show ? "block" : "none"), position: 'fixed', zIndex: 1040,  top: 0, bottom: 0, left: 0, right: 0}, role: "dialog" },
+            React.DOM.div({ style: { position: 'fixed', zIndex: 1040, top: 0, bottom: 0, left: 0, right: 0,  backgroundColor: '#000',  opacity: 0.5}} ),
             React.DOM.div({ className: "modal-dialog", role: "document" },
                 React.DOM.div({ className: "modal-content"},
                     React.DOM.div({ className: "modal-header" },
@@ -47,6 +51,7 @@ var Modal = React.createClass({
                 )
             )//modal-content
             )//modal-dialog
+
         )//modal fade
     }
 });
