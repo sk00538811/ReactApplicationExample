@@ -45,14 +45,8 @@ var rootElement = React.createClass({
        this.setState({ statedate:value   }); 
     },
     render: function () {
-        return React.DOM.div({ className: "col-md-4" },
-            React.DOM.div({
-                className: 'form-group'
-            }, React.DOM.label({
-                    htmlFor : 'txtName'
-            }, 'Enter Name'),
-                React.DOM.input({ id: 'txtName', className: 'form-control' })),
-            React.DOM.br(),
+        return React.DOM.div({ className: "col-md-4 panel panel-primary" },
+            
             React.DOM.label({ className: 'text text-warning' }, this.getUpdatedDate().date.toLocaleTimeString())
             ,
             React.DOM.br(), 
