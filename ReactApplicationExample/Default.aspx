@@ -12,8 +12,9 @@
             <div class="form-group">
                 <label class="label label-info" for="drpReactExample">Select React Example:</label>
                 <select class="form-control" id="drpReactExample">
+                    <option value="">Without class compunent</option>
                     <option value="Scripts/example/basic-Component.js">basic-Component </option>
-                    <option value="Scripts/example/button.js">button </option>
+                    <option value="Scripts/example/button.js">button</option>
                     <option value="Scripts/example/button-click.js">button click </option>
                     <option value="Scripts/example/nested-Component.js">nested-Component </option>
                     <option value="Scripts/example/component-prop.js">component prop </option>
@@ -33,7 +34,7 @@
     </div>
     <hr class="col-xs-12" />
     <div class="row">
-            <label class="label label-info">react-app</label>
+        <label class="label label-info">react-app</label>
         <div class="well">
             <div id="react-app"></div>
         </div>
@@ -41,17 +42,20 @@
     <hr class="col-xs-12" />
     <div class="row ">
         <div id="ScriptSample" class="well-lg">
-            <label class="label label-info">Sample Script</label> 
+            <label class="label label-info">Sample Script</label>
             <pre>
          var rootElement_ = React.DOM.div({
             className: 'btn btn-primary'
         }, "Submit");
-        React.renderComponent(rootElement_, document.getElementById('react-app')); 
+         </pre>
+         <pre>//initialization code
+         React.renderComponent(rootElement_, document.getElementById('react-app')); 
         </pre>
         </div>
     </div>
     <script> 
         $(document).ready(function () {
+            $('#drpReactExample').val("");
             var rootElement_ = React.DOM.div({
                 className: 'btn btn-primary'
             }, "Submit");
@@ -81,6 +85,7 @@
             }
             $('#btnApplyReactExample').click(function () {
                 var url = $('#drpReactExample').val();
+                if (url == "") { window.location.reload(); return; }
                 $('script#scptExmap').remove();
                 loadScript(url, function () {
                     debugger;
@@ -92,7 +97,7 @@
                         .done(function (r) {
                             /* yay, all good, do something */
                             $('#ScriptSample').append($('<pre></pre>').text(r));
-
+                            $('#ScriptSample').append($('<pre></pre>').text("//initialization code\nReact.renderComponent(rootElement(), document.getElementById('react-app'));"));
                         })
                         .fail(function () {
                             /* boo, fall back to something else */
