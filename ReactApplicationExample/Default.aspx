@@ -24,6 +24,7 @@
                     <option value="Scripts/example/modal-Component_0.js">modal component 0 </option>
                     <option value="Scripts/example/modal-Component_1.js">modal component 1 </option>
                     <option value="Scripts/example/modal-Component_2.js">modal component 2 </option>
+                    <option value="Scripts/example/modal-Invoke-modal-Component_2.js">modal-Invoke-modal 3 </option>
                 </select>
             </div>
         </div>
