@@ -197,22 +197,22 @@
     <None Include="Scripts\jquery-1.10.2.intellisense.js" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
-    <Content Include="Scripts\example\basic-Component.js" />
-    <Content Include="Scripts\example\button-click.js" />
-    <Content Include="Scripts\example\button.js" />
-    <Content Include="Scripts\example\child-call-perent-method.js" />
-    <Content Include="Scripts\example\component-prop.js" />
-    <Content Include="Scripts\example\component-state.js" />
-    <Content Include="Scripts\example\data-to-create-component.js" />
-    <Content Include="Scripts\example\dropdown-with-react.js" />
-    <Content Include="Scripts\example\modal-Component_0.js" />
-    <Content Include="Scripts\example\modal-Component_3.js" />
-    <Content Include="Scripts\example\modal-Invoke-modal-Component_2.js" />
-    <Content Include="Scripts\example\modal-Component_1.js" />
-    <Content Include="Scripts\example\nested-Component-Pass-val-method.js" />
-    <Content Include="Scripts\example\nested-Component.js" />
-    <Content Include="Scripts\example\parent-call-child-method.js" />
-    <Content Include="Scripts\example\passing-data-between-classes-components.js" />
+    <Content Include="Scripts\example\ch0001-basic-Component.js" />
+    <Content Include="Scripts\example\ch0003-button-click.js" />
+    <Content Include="Scripts\example\ch0002-button.js" />
+    <Content Include="Scripts\example\ch0009-child-call-perent-method.js" />
+    <Content Include="Scripts\example\ch0006-component-prop.js" />
+    <Content Include="Scripts\example\ch0007-component-state.js" />
+    <Content Include="Scripts\example\ch0005-data-to-create-component.js" />
+    <Content Include="Scripts\example\ch0010-dropdown-with-react.js" />
+    <Content Include="Scripts\example\ch0013-modal-Component.js" />
+    <Content Include="Scripts\example\ch0015-modal-Component.js" />
+    <Content Include="Scripts\example\ch0016-modal-Invoke-modal-Component.js" />
+    <Content Include="Scripts\example\ch0014-modal-Component.js" />
+    <Content Include="Scripts\example\ch0011-nested-Component-Pass-val-method.js" />
+    <Content Include="Scripts\example\ch0004-nested-Component.js" />
+    <Content Include="Scripts\example\ch0008-parent-call-child-method.js" />
+    <Content Include="Scripts\example\ch0012-passing-data-between-classes-components.js" />
     <Content Include="Scripts\jquery-1.10.2.js" />
     <Content Include="Scripts\jquery-1.10.2.min.js" />
     <Content Include="Scripts\lib\react.js" />
@@ -389,6 +389,7 @@
     <Compile Include="Contact.aspx.designer.cs">
       <DependentUpon>Contact.aspx</DependentUpon>
     </Compile>
+    <Compile Include="Controllers\ExampleController.cs" />
     <Compile Include="Default.aspx.cs">
       <DependentUpon>Default.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -426,7 +427,7 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
-    <Folder Include="Controllers\" />
+    <Folder Include="Views\Example\" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

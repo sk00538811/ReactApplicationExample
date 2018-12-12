@@ -11,20 +11,7 @@
         <div class="col-md-4 ">
             <div class="form-group">
                 <label class="label label-info" for="drpReactExample">Select React Example:</label>
-                <select class="form-control" id="drpReactExample">
-                    <option value="">Without class compunent</option>
-                    <option value="Scripts/example/basic-Component.js">basic-Component </option>
-                    <option value="Scripts/example/button.js">button</option>
-                    <option value="Scripts/example/button-click.js">button click </option>
-                    <option value="Scripts/example/nested-Component.js">nested-Component </option>
-                    <option value="Scripts/example/component-prop.js">component prop </option>
-                    <option value="Scripts/example/component-state.js">component state </option>
-                    <option value="Scripts/example/child-call-perent-method.js">child-call-perent-method </option>
-                    <option value="Scripts/example/passing-data-between-classes-components.js">passing-data-between-classes-components </option>
-                    <option value="Scripts/example/modal-Component_0.js">modal component 0 </option>
-                    <option value="Scripts/example/modal-Component_1.js">modal component 1 </option>
-                    <option value="Scripts/example/modal-Component_2.js">modal component 2 </option>
-                    <option value="Scripts/example/modal-Invoke-modal-Component_2.js">modal-Invoke-modal 3 </option>
+                <select class="form-control" id="drpReactExample"> 
                 </select>
             </div>
         </div>
@@ -33,8 +20,15 @@
             <button id="btnApplyReactExample" class="btn btn-primary" type="button">Apply</button>
         </div>
     </div>
+     <hr class="col-xs-12" />
+    <div class="row ">
+        <label class="label label-info">Description</label>
+        <div class="well">
+            <div id="react-app-detail"></div>
+        </div>
+    </div>
     <hr class="col-xs-12" />
-    <div class="row">
+    <div class="row ">
         <label class="label label-info">react-app</label>
         <div class="well">
             <div id="react-app"></div>
@@ -49,14 +43,52 @@
             className: 'btn btn-primary'
         }, "Submit");
          </pre>
-         <pre>//initialization code
+            <pre>//initialization code
          React.renderComponent(rootElement_, document.getElementById('react-app')); 
         </pre>
         </div>
     </div>
+    
     <script> 
         $(document).ready(function () {
             $('#drpReactExample').val("");
+            $.ajax({
+                type: 'GET',
+                url: 'Example/Index',
+                async: false,
+                data: null,
+                dataType: 'json',
+                contentType: 'application/json'
+            }).done(function (response) {
+                $('select[id="drpReactExample"]').empty()
+                $('select[id="drpReactExample"]').append('<option value="">Without class compunent</option>');
+                $.each(response, function (idex, item) {
+                    $('select[id="drpReactExample"]').append('<option value="' + item.Value + '">' + item.Text + '</option>');
+                });
+
+            }).fail(function (jqXHR, exception) {
+                // Our error logic here
+                var msg = '';
+                switch (jqXHR.status) {
+                    case "0":
+                        msg = 'Not connect.\n Verify Network.'; break;
+                    case "404":
+                        msg = 'Requested page not found. [404]'; break;
+                    case "500":
+                        msg = 'Internal Server Error [500].'; break;
+                    case "parsererror":
+                        msg = 'Requested JSON parse failed.'; break;
+                    case "timeout":
+                        msg = 'Time out error.'; break;
+                    case "abort":
+                        msg = 'Ajax request aborted.'; break;
+                    default:
+                        msg = 'Uncaught Error.\n' + jqXHR.responseText; break;
+                }
+                $('#post').html(msg);
+            }).always(function () {
+                alert("complete");
+            });
             var rootElement_ = React.DOM.div({
                 className: 'btn btn-primary'
             }, "Submit");
