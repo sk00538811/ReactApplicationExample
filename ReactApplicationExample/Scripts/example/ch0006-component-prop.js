@@ -60,32 +60,4 @@ var rootElement = React.createClass({
             ));
     }
 });
-var buttonComponent = React.createClass({
-    propTypes: {
-        data: React.PropTypes.string
-    },
-    handleEvent: function (e) {
-        alert('clicked on button:' + this.props.method().strDate );
-
-    },
-    componentWillReceiveProps:function(nextProps) {
-        if (JSON.stringify(this.props.data ) !== JSON.stringify(nextProps.data)) // Check if it's a new data, you can also use some unique property, like the ID
-        {
-            alert('child component data change old:' + this.props.data+',  new:'+nextProps.data)
-        }
-    }, 
-
-    render: function () {
-        debugger;
-        var strdate = this.props.data;
-        return React.DOM.div(null, React.DOM.div({
-            className: 'btn btn-primary', onClick: this.handleEvent
-        }, "Submit"
-        ),
-            React.DOM.br(),
-            React.DOM.label({ className: 'text text-success' }
-                , strdate
-            )
-        );
-    }
-});
+ 

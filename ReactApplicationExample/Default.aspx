@@ -120,8 +120,7 @@
                 var url = $('#drpReactExample').val();
                 if (url == "") { window.location.reload(); return; }
                 $('script#scptExmap').remove();
-                loadScript(url, function () {
-                    debugger;
+                loadScript(url, function () { 
                     //initialization code
                     React.renderComponent(rootElement(), document.getElementById('react-app'));
                     $('#ScriptSample').empty();
