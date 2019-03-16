@@ -18,7 +18,7 @@
                 popoverstyle: "width: 600px; max-width:900px" /*500px*/,
 
                 popoverplacement: "bottom" /*right*/,
-                trigger: "click"/* "hover" */
+                trigger: "hover"/* "click" */
             })
         );
     }
