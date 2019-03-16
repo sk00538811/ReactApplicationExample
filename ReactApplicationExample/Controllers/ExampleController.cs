@@ -94,5 +94,14 @@ namespace ReactApplicationExample.Controllers
                 return View();
             }
         }
+
+        public ActionResult Msg()
+        {
+            return View();
+        }
+        public ActionResult OneToOneMsg()
+        {
+            return View();
+        }
     }
 }

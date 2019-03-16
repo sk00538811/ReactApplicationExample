@@ -187,7 +187,14 @@ D:\Surendra\Projects\OtherProject\ReactApplicationExample\ReactApplicationExampl
 D:\Surendra\Projects\OtherProject\ReactApplicationExample\ReactApplicationExample\bin\Microsoft.Owin.Security.Twitter.xml
 D:\Surendra\Projects\OtherProject\ReactApplicationExample\ReactApplicationExample\bin\Microsoft.Owin.Security.MicrosoftAccount.xml
 D:\Surendra\Projects\OtherProject\ReactApplicationExample\ReactApplicationExample\bin\Microsoft.Owin.Security.OAuth.xml
-D:\Surendra\Projects\OtherProject\ReactApplicationExample\ReactApplicationExample\obj\Debug\ReactApplicationExample.csprojResolveAssemblyReference.cache
 D:\Surendra\Projects\OtherProject\ReactApplicationExample\ReactApplicationExample\obj\Debug\ReactApplicationExample.csproj.CoreCompileInputs.cache
 D:\Surendra\Projects\OtherProject\ReactApplicationExample\ReactApplicationExample\obj\Debug\ReactApplicationExample.dll
 D:\Surendra\Projects\OtherProject\ReactApplicationExample\ReactApplicationExample\obj\Debug\ReactApplicationExample.pdb
+D:\Surendra\Projects\OtherProject\ReactApplicationExample\ReactApplicationExample\bin\Microsoft.AspNet.SignalR.Core.dll
+D:\Surendra\Projects\OtherProject\ReactApplicationExample\ReactApplicationExample\bin\Microsoft.AspNet.SignalR.SystemWeb.dll
+D:\Surendra\Projects\OtherProject\ReactApplicationExample\ReactApplicationExample\bin\Microsoft.AspNet.SignalR.Core.pdb
+D:\Surendra\Projects\OtherProject\ReactApplicationExample\ReactApplicationExample\bin\Microsoft.AspNet.SignalR.Core.xml
+D:\Surendra\Projects\OtherProject\ReactApplicationExample\ReactApplicationExample\bin\Microsoft.AspNet.SignalR.SystemWeb.pdb
+D:\Surendra\Projects\OtherProject\ReactApplicationExample\ReactApplicationExample\bin\Microsoft.AspNet.SignalR.SystemWeb.xml
+D:\Surendra\Projects\OtherProject\ReactApplicationExample\ReactApplicationExample\obj\Debug\ReactApplicationExample.csprojAssemblyReference.cache
+D:\Surendra\Projects\OtherProject\ReactApplicationExample\ReactApplicationExample\obj\Debug\ReactApplicationExample.csproj.CopyComplete

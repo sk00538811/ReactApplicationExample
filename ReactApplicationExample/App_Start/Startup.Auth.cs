@@ -8,7 +8,7 @@ using Microsoft.Owin.Security.DataProtection;
 using Microsoft.Owin.Security.Google;
 using Owin;
 using ReactApplicationExample.Models;
-
+ 
 namespace ReactApplicationExample
 {
     public partial class Startup {
@@ -16,6 +16,8 @@ namespace ReactApplicationExample
         // For more information on configuring authentication, please visit http://go.microsoft.com/fwlink/?LinkId=301883
         public void ConfigureAuth(IAppBuilder app)
         {
+            // Any connection or hub wire up and configuration should go here
+            app.MapSignalR();
             // Configure the db context, user manager and signin manager to use a single instance per request
             app.CreatePerOwinContext(ApplicationDbContext.Create);
             app.CreatePerOwinContext<ApplicationUserManager>(ApplicationUserManager.Create);
